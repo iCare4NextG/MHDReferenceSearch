@@ -108,7 +108,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_REFERENCE_UUID, referenceUuid);
 			}
 
-			// id
+			// id (Reference UUID for Search)
 			if (cl.hasOption(OPTION_ID)) {
 				String id = cl.getOptionValue(OPTION_ID);
 				LOG.info("option {}={}", OPTION_ID, id);
@@ -124,7 +124,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_PATIENT_UUID, patientUuid);
 			}
 
-			// patient.identifier
+			// patient.identifier (ex. PatientIdValue^^^&AssignerId&AssignerIdType)
 			if (cl.hasOption(OPTION_PATIENT_IDENTIFIER)) {
 				String patientIdentifier = cl.getOptionValue(OPTION_PATIENT_IDENTIFIER);
 				LOG.info("option {}={}", OPTION_PATIENT_IDENTIFIER, patientIdentifier);
@@ -132,7 +132,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_PATIENT_IDENTIFIER, patientIdentifier);
 			}
 
-			// status
+			// status (Document Reference Status : current | superseded | entered-in-error)
 			if (cl.hasOption(OPTION_STATUS)) {
 				String[] component = cl.getOptionValue(OPTION_STATUS).split(",");
 				List<String> statusList = getComponentList(component);
@@ -141,7 +141,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_STATUS, statusList);
 			}
 
-			// identifier
+			// identifier (Other identifiers for the document)
 			if (cl.hasOption(OPTION_IDENTIFIER)) {
 				String[] component = cl.getOptionValue(OPTION_IDENTIFIER).split(",");
 				List<String> identifierList = getComponentList(component);
@@ -150,7 +150,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_IDENTIFIER, identifierList);
 			}
 
-			// date
+			// date (When this document reference was created)
 			if (cl.hasOption(OPTION_DATE)) {
 				String[] component = cl.getOptionValue(OPTION_DATE).split(",");
 				List<String> dateList = getComponentList(component);
@@ -159,7 +159,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_DATE, dateList);
 			}
 
-			// author.family
+			// author.family (Who and/or what authored the document)
 			if (cl.hasOption(OPTION_AUTHOR_FAMILY)) {
 				String[] component = cl.getOptionValue(OPTION_AUTHOR_FAMILY).split(",");
 				List<String> authorFamilyList = getComponentList(component);
@@ -168,7 +168,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_AUTHOR_FAMILY, authorFamilyList);
 			}
 
-			// author.given
+			// author.given (Who and/or what authored the document)
 			if (cl.hasOption(OPTION_AUTHOR_GIVEN)) {
 				String[] component = cl.getOptionValue(OPTION_AUTHOR_GIVEN).split(",");
 				List<String> authorGivenList = getComponentList(component);
@@ -177,7 +177,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_AUTHOR_GIVEN, authorGivenList);
 			}
 
-			// category
+			// category (Categorization of document)
 			if (cl.hasOption(OPTION_CATEGORY)) {
 				String[] component = cl.getOptionValue(OPTION_CATEGORY).split(",");
 				List<String> categoryList = getComponentList(component);
@@ -186,7 +186,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_CATEGORY, categoryList);
 			}
 
-			// type
+			// type (Kind of document (LOINC if possible))
 			if (cl.hasOption(OPTION_TYPE)) {
 				String[] component = cl.getOptionValue(OPTION_TYPE).split(",");
 				List<String> typeList = getComponentList(component);
@@ -195,7 +195,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_TYPE, typeList);
 			}
 
-			// setting
+			// setting (Additional details about where the content was created (e.g. clinical specialty))
 			if (cl.hasOption(OPTION_SETTING)) {
 				String[] component = cl.getOptionValue(OPTION_SETTING).split(",");
 				List<String> settingList = getComponentList(component);
@@ -204,7 +204,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_SETTING, settingList);
 			}
 
-			// period
+			// period (Time of service that is being documented)
 			if (cl.hasOption(OPTION_PERIOD)) {
 				String[] component = cl.getOptionValue(OPTION_PERIOD).split(",");
 				List<String> periodList = getComponentList(component);
@@ -213,7 +213,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_PERIOD, periodList);
 			}
 
-			// facility
+			// facility (Kind of facility where patient was seen)
 			if (cl.hasOption(OPTION_FACILITY)) {
 				String[] component = cl.getOptionValue(OPTION_FACILITY).split(",");
 				List<String> facilityList = getComponentList(component);
@@ -222,7 +222,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_FACILITY, facilityList);
 			}
 
-			// event
+			// event (Main clinical acts documented)
 			if (cl.hasOption(OPTION_EVENT)) {
 				String[] component = cl.getOptionValue(OPTION_EVENT).split(",");
 				List<String> eventList = getComponentList(component);
@@ -231,7 +231,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_EVENT, eventList);
 			}
 
-			// security-label
+			// security-label (Document security-tags)
 			if (cl.hasOption(OPTION_SECURITY_LABEL)) {
 				String[] component = cl.getOptionValue(OPTION_SECURITY_LABEL).split(",");
 				List<String> securityLabelList = getComponentList(component);
@@ -240,7 +240,7 @@ public class MHDReferenceSearch extends UtilContext {
 				optionMap.put(OPTION_SECURITY_LABEL, securityLabelList);
 			}
 
-			// reference format
+			// reference format (Format/content rules for the document)
 			if (cl.hasOption(OPTION_REFERENCE_FORMAT)) {
 				String[] component = cl.getOptionValue(OPTION_REFERENCE_FORMAT).split(",");
 				List<String> formatList = getComponentList(component);
